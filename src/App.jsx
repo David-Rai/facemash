@@ -5,8 +5,8 @@ const App = () => {
 const [images,setImages]=useState({img1:"",img2:""})
 
 const fetchImage=async (imgType)=>{
-// let response=await fetch('https://randomuser.me/api/?gender=female')
-let response=await fetch('https://randomuser.me/api/')
+let response=await fetch('https://randomuser.me/api/?gender=female')
+// let response=await fetch('https://randomuser.me/api/')
 
 let data=await response.json()
 setImages((prev)=> ({...prev,[imgType]:data.results[0].picture.large}))
@@ -30,7 +30,8 @@ fetchImage("img2")
   return (
     <>
       <main>
-        <div className="banner"><h1>Who is hotter ? choose one</h1></div>
+        <header>facemash</header>
+        <div className="banner"><h1>Who is hotter ? click to choose</h1></div>
 
         <div className="container">
           <div className="left" onClick={()=> fetchImage("img2")}>
