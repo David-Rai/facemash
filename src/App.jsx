@@ -42,7 +42,7 @@ fetchImage("img2")
             <img src={images.img1} alt="" />
           </div>
 <h1 className="or">or</h1>
-          <div className="right"  onClick={()=>  fetchImage("img2")}>
+          <div className="right"  onClick={()=>  fetchImage("img1")}>
           <img src={images.img2} alt="" />
           </div>
         </div>
