@@ -10,6 +10,10 @@ let response=await fetch('https://randomuser.me/api/?gender=female')
 
 let data=await response.json()
 setImages((prev)=> ({...prev,[imgType]:data.results[0].picture.large}))
+if(images.img1 || images.img2){
+  console.log(images.img1)
+console.log(images.img2)
+}
 }
 
 useEffect(()=>{
